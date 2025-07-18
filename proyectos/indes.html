@@ -1,0 +1,318 @@
+!<HTML>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sabor Noble</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 40px;
+    background: white;
+  }
+  /* Pantalla principal */
+  #home-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 12px;
+    padding: 30px 40px 40px 40px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(255, 126, 95, 0.6);
+    position: relative;
+  }
+  .carousel {
+    position: relative;
+    max-width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+  .carousel img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 12px;
+  }
+  .carousel img.active {
+    opacity: 1;
+    position: relative;
+  }
+  #home-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  }
+  #home-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  .btn {
+    display: inline-block;
+    margin: 30px auto 0 auto;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff7e5f;
+    background-color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+    text-decoration: none;
+  }
+  .btn:hover {
+    background-color: #ff7e5f;
+    color: white;
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.7);
+  }
+
+  /* Sección menú con tarjetas */
+  #menu-section {
+    display: none;
+  }
+  #menu-section h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-content h3 {
+    margin: 0 0 10px 0;
+    color: #007BFF;
+  }
+  .card-content p.description {
+    flex-grow: 1;
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  .price-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .price-list li {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  .btn-back {
+    background-color: #dc3545;
+    margin-top: 40px;
+    color: white;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+  .btn-back:hover {
+    background-color: #a71d2a;
+  }
+ 
+
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Pantalla principal -->
+  <section id="home-section">
+    <div class="carousel">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Plato delicioso 1" class="active" />
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Plato delicioso 2" />
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Plato delicioso 3" />
+      <img src="C:\Users\HP\Desktop\IMAGEN.JPG"=format&fit=crop&w=800&q=80" />
+      <img src="C:\Users\HP\Desktop\descarga (1).JPG"/>
+    </div>
+    <h1>Sabor Noble</h1>
+    <p><strong>Teléfono:</strong> 0969216910</p>
+    <p><strong>Correo:</strong> contacto@elbuen­sabor.com</p>
+    <p><strong>Ubicación:</strong>San camilo José Joaquín de Olmedo y la c</p>
+    <button class="btn" id="show-menu-btn">Ver Menú</button>
+  </section>
+
+  <!-- Sección menú -->
+  <section id="menu-section">
+    <h1>Menú del Comedor sabor noble</h1>
+    <div class="cards-container">
+      <div class="card">
+        <img src=https://i.postimg.cc/59zcF46X/descarga-2.jpg />
+        <div class="card-content">
+          <h3>Pollo a la Plancha</h3>
+          <p class="description">Pechuga de pollo sazonada y a la plancha, acompañada de arroz y ensalada.</p>
+          <ul class="price-list">
+            <li>Pequeño (1 porción): $5.00</li>
+            <li>Mediano (1.5 porciones): $7.00</li>
+            <li>Grande (2 porciones): $9.00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src=https://i.postimg.cc/mD6n1qGN/presentacion-227.jpg=/>
+        <div class="card-content">
+          <h3>Lasaña de Carne</h3>
+          <p class="description">Capas de pasta con carne molida, salsa de tomate y queso gratinado.</p>
+          <ul class="price-list">
+            <li>Porción individual: $6.50</li>
+            <li>Porción familiar (2-3 personas): $12.00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Ensalada César" />
+        <div class="card-content">
+          <h3>Ensalada César</h3>
+          <p class="description">Lechuga, crutones, queso parmesano y aderezo César.</p>
+          <ul class="price-list">
+            <li>Pequeña: $3.50</li>
+            <li>Grande: $6.00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src=https://i.postimg.cc/0N43bFvG/IMAGEN2.jpg />
+        <div class="card-content">
+          <h3>Sopa de Verduras</h3>
+          <p class="description">Sopa caliente con variedad de verduras frescas y caldo natural.</p>
+          <ul class="price-list">
+            <li>Taza: $2.00</li>
+            <li>Plato: $4.00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src=https://i.postimg.cc/Bvj79pFj/IMAGEN.jpg/>
+          <div class="card-content">
+          <h3>Carne Asada</h3>
+          <p class="description">Corte de carne vacuna a la parrilla, acompañado de papas y ensalada.</p>
+          <ul class="price-list">
+            <li>150 gramos: $8.00</li>
+            <li>250 gramos: $12.00</li>
+            <li>350 gramos: $15.00</li>
+          </ul>
+        </div>
+      </div>
+
+
+     <div class="card">
+     <img src=https://i.postimg.cc/HsK7vtTZ/descarga-4.jpg />
+    <div class="card-content">
+      <h3>Tarta de Limón y Merengue Italiano</h3>
+       <p class="description">Base de masa sablé crujiente, rellena con crema de limón fresca y cubierta con un merengue italiano perfectamente tostado.</p>
+       <ul class="price-list">
+      <li>Porción individual: $4.50</li>
+      <li>Tarta entera (6-8 porciones): $20.00</li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="card">
+  <img src=https://i.postimg.cc/wBFqZ6hq/descarga-5.jpg />
+  <div class="card-content">
+    <h3>Ceviche de Camarón Estilo Gourmet</h3>
+    <p class="description">Camarones cocidos al limón con cebolla morada, tomate, cilantro fresco y toques de aguacate, servido en copa con crocante de plátano.</p>
+    <ul class="price-list">
+      <li>Porción individual: $5.00</li>
+      <li>Porción doble: $9.00</li>
+    </ul>
+  </div>
+</div>
+
+    
+
+     <div class="card">
+        <img src=https://i.postimg.cc/5ydwrq5W/descarga-3.jpg/>
+          <div class="card-content">
+          <h3>pizza</h3>
+          <p class="description">masa de harina con queso rallado y pasta de tomate con jamon.</p>
+          <ul class="price-list">
+            <li>pizza pequeña $8.00</li>
+            <li>pizza mediana: $12.00</li>
+            <li>pizza grande: $15.00</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="btn-back" id="back-btn">Volver</button>
+  </section>
+</div>
+
+
+<script>
+  const showMenuBtn = document.getElementById('show-menu-btn');
+  const backBtn = document.getElementById('back-btn');
+  const homeSection = document.getElementById('home-section');
+  const menuSection = document.getElementById('menu-section');
+
+  showMenuBtn.addEventListener('click', () => {
+    homeSection.style.display = 'none';
+    menuSection.style.display = 'block';
+  });
+
+  backBtn.addEventListener('click', () => {
+    menuSection.style.display = 'none';
+    homeSection.style.display = 'block';
+  });
+
+  // Carrusel pantalla principal
+  const images = document.querySelectorAll('.carousel img');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+  }, 4000);
+</script>
+</body>
+</html>
